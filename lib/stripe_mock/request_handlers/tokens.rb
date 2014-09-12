@@ -1,3 +1,5 @@
+require 'pp'
+
 module StripeMock
   module RequestHandlers
     module Tokens
@@ -26,7 +28,7 @@ module StripeMock
           params[:card][:last4] = params[:card][:number][-4,4]
           customer_card = params[:card]
         else
-          customer = assert_existance :customer, cus_id, customers[cus_id]
+          customer = assert_existance :customer, cus_id, customers[cus_id["id"]]
           customer_card = get_card(customer, customer[:default_card])
         end
 
