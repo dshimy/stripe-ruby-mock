@@ -12,7 +12,7 @@ This gem has unexpectedly grown in popularity and I've gotten pretty busy, so I'
 
 In your gemfile:
 
-    gem 'stripe-ruby-mock', '~> 2.1.1', :require => 'stripe_mock'
+      gem 'stripe-ruby-mock', git: 'https://github.com/dshimy/stripe-ruby-mock', branch: 'master'
 
 ## Features
 
