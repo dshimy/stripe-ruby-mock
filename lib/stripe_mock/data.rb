@@ -30,6 +30,23 @@ module StripeMock
       }.merge(params)
     end
 
+    def self.mock_balance(params={})
+      {
+        id: "txn_6KJ9PEvTewrXAo",
+        object: "balance_transaction",
+        amount: 2500,
+        currency: "usd",
+        net: 2397,
+        type: "charge",
+        created: 1432871531,
+        available_on: 1433030400,
+        status: "pending",
+        fee: 103,
+        source: "ch_6KJ9ljmo7FkLyb",
+        description: nil,
+      }
+    end
+
     def self.mock_charge(params={})
       charge_id = params[:id] || "ch_1fD6uiR9FAA2zc"
       {
